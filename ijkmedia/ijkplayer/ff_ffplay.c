@@ -161,7 +161,7 @@ static int packet_queue_put_private(PacketQueue *q, AVPacket *pkt)
 #ifdef FFP_SHOW_PKT_RECYCLE
     int total_count = q->recycle_count + q->alloc_count;
     if (!(total_count % 50)) {
-        av_log(ffp, AV_LOG_DEBUG, "pkt-recycle \t%d + \t%d = \t%d\n", q->recycle_count, q->alloc_count, total_count);
+        av_log(NULL, AV_LOG_DEBUG, "pkt-recycle \t%d + \t%d = \t%d\n", q->recycle_count, q->alloc_count, total_count);
     }
 #endif
 #endif
