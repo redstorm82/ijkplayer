@@ -1,0 +1,5 @@
+编译备忘：
+默认开启hevc硬解
+export ANDROID_NDK=/home/compile/android-ndk-r14b
+git clone https://github.com/redstorm82/ijkplayer.git ijkplayer
+cd ijkplayer && git checkout -B 0.8.8_sviconf && ./init-android.sh && cd android/contrib && ./compile-ffmpeg.sh clean && ./compile-ffmpeg.sh all &&  cd .. && ./compile-ijk.sh all
